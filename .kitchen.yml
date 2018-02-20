@@ -1,0 +1,41 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  ansible_version: 2.1.1.0
+  hosts: all
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+  ansible_verbose: false
+  ansible_verbosity: 3
+  ansible_check: false
+  ansible_diff: true
+  # ansible_inventory: hosts
+
+
+verifier:
+   ruby_bindir: /usr/bin
+
+platforms:
+  - name: ansible-centos7-x86_64
+    driver_config:
+      box: ansible-centos7-x86_64
+      box_url: file:///Users/lindsworth_garvey/curbStoneOps/sysConfigFiles/vagrantRepo/ansible-centos7-x86_64
+      synced_folders:
+       - [ "~/curbstoneOps/ansiblePlaybook", "/vagrant"]
+
+suites:
+  - name: ansible-subscript-var
+    driver:
+        vm_hostname: ansible-centos7-x86_64.curbstoneops.com
+        network:
+          - ["private_network", {ip: "10.13.3.10"}]
+    provisioner:
+      # sudo: true
+      hosts: ansible-centos7-x86_64
+      require_ansible_repo: true
+      playbook: playbooks/subscript-var.yml
+
+...

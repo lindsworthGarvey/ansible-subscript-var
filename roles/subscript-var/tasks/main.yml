@@ -1,0 +1,11 @@
+---
+
+- name: Using subscript to access Ansible sub-elements
+  debug:
+   var: host['ip'][0]
+
+- debug:
+    msg="{{ host['ip'][0] }} {{ host['ip'][1] }} {{ host['ip'][2] }} {{ host['name'][0] }} {{ host['name'][1] }}"
+
+- debug:
+    msg="{{ host }}"
