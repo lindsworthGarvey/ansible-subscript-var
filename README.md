@@ -18,7 +18,7 @@ host:
 
 Example:
 ----------------------
-Use debug to display the derived variable - comprised of subscript elements
+Use debug to display the derived variable - made up of subscript elements
 
 - debug:
     msg="{{ host['ip'][0] }} {{ host['name'][0] }}"
