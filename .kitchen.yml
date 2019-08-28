@@ -22,7 +22,7 @@ platforms:
   - name: ansible-centos7-x86_64
     driver_config:
       box: ansible-centos7-x86_64
-      box_url: file:///Users/lindsworth_garvey/curbStoneOps/vagrantRepo/ansible-centos7-x86_64
+      box_url: file:///Users/lindsworthgarvey/curbStoneOps/vagrantRepo/ansible-centos7-x86_64
       synced_folders:
        - [ "~/curbstoneOps/ansiblePlaybook", "/vagrant"]
 
