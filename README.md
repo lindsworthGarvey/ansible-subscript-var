@@ -12,9 +12,9 @@ host:
     - 10.13.3.11
     - 10.13.3.12
   name:
-   - ssi-centos7-k8s-etcd.ssi.com
-   - ssi-centos7-k8s-etcd-1.ssi.com
-   - ssi-centos7-k8s-etcd-2.ssi.com
+   - k8s-etcd.curbstoneops.com
+   - k8s-etcd-1.curbstoneops.com
+   - k8s-etcd-2.curbstoneops.com
 
 Example:
 ----------------------
@@ -28,7 +28,7 @@ Will return:
 TASK [../roles/test : debug]
 *************************************************************************************
 ok: [localhost] => {
-    "msg": "10.13.3.10 ssi-centos7-k8s-etcd.ssi.com"
+    "msg": "10.13.3.10 k8s-etcd.curbstoneops.com"
 }
 
 Testing locally
